@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoItem } from './interfaces/todo-item';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +22,13 @@ template: `Title: {{title}}
 })
 export class AppComponent { 
   title = 'andies list';
-  todoList = [
+  todoList: TodoItem[] = [
     {title: 'install NodeJS'},
     {title: 'install Angular CLI'},
     {title: 'create new app'},
     {title: 'serve app'},
     {title: 'develop app'},
     {title: 'deploy app'},
-    {title: 'make meals'},
   ];
 
   constructor() { 
