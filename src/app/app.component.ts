@@ -6,10 +6,16 @@ import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,InputButtonUnitComponent ], 
-  template: `Title : {{title}} <app-input-button-unit/>`,
+template: `Title: {{title}}
+  <app-input-button-unit></app-input-button-unit>  
+`,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent { 
   title = 'andies list';
-}
+
+
+  constructor() { 
+    this.title = 'I Love Angular';
+  }}
  
