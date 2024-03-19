@@ -1,8 +1,13 @@
 <p>input-button-unit works!</p><p>
     input-button-unit works!
     The item title is: {{ title }}
-    <input [value]="title" (keyup.enter)="changeTitle(getInputValue($event))">
-    <button (click)="changeTitle('Button Clicked!')">Save</button>
-    {{generateTitle()}}
+    <input #inputElementRef
+         [value]="title"
+         (keyup.enter)="changeTitle(getInputValue($event))">
+
+  <button (click)="changeTitle(inputElementRef.value)">
+    Save
+  </button>
+    {{title}}
   </p>
   
